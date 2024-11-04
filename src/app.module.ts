@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DatabaseConfiguration } from 'config/database.configuration';
 import { Administrator } from 'entities/administrator.entity';
+import { AdministratorService } from './services/administrator/administrator.service';
 
 @Module({
   imports: [
@@ -20,6 +21,6 @@ import { Administrator } from 'entities/administrator.entity';
     TypeOrmModule.forFeature([Administrator])
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, AdministratorService],
 })
 export class AppModule {}
