@@ -6,8 +6,8 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
-import { Article } from "./Article";
-import { Cart } from "./Cart";
+import { Article } from "./article.entity";
+import { Cart } from "./cart.entity";
 
 @Index("cart_article_article_FK", ["articleId"], {})
 @Index("cart_article_cart_id_IDX", ["cartId", "articleId"], { unique: true })

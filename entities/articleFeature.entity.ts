@@ -6,14 +6,14 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
-import { Article } from "./Article";
-import { Feature } from "./Feature";
+import { Article } from "./article.entity";
+import { Feature } from "./feature.entity";
 
 @Index("article_feature_article_id_IDX", ["articleId", "featureId"], {
   unique: true,
 })
 @Index("article_feature_feature_FK", ["featureId"], {})
-@Entity("article_feature", { schema: "aplikacija" })
+@Entity("article_feature")
 export class ArticleFeature {
   @PrimaryGeneratedColumn({
     type: "int",

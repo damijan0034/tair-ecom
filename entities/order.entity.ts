@@ -6,7 +6,7 @@ import {
   OneToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
-import { Cart } from "./Cart";
+import { Cart } from "./cart.entity";
 
 @Index("order_cart_id_IDX", ["cartId"], { unique: true })
 @Entity("order", { schema: "aplikacija" })

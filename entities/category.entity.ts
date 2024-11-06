@@ -7,8 +7,8 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from "typeorm";
-import { Article } from "./Article";
-import { Feature } from "./Feature";
+import { Article } from "./article.entity";
+import { Feature } from "./feature.entity";
 
 @Index("category_category_FK", ["parentCategoryId"], {})
 @Index("uq_category_image_path", ["imagePath"], { unique: true })

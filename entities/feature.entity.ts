@@ -7,8 +7,8 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from "typeorm";
-import { ArticleFeature } from "./ArticleFeature";
-import { Category } from "./Category";
+import { ArticleFeature } from "./articleFeature.entity";
+import { Category } from "./category.entity";
 
 @Index("feature_category_FK", ["categoryId"], {})
 @Index("feature_name_IDX", ["name", "categoryId"], { unique: true })

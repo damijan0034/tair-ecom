@@ -6,10 +6,10 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
-import { Article } from "./Article";
+import { Article } from "./article.entity";
 
 @Index("article_price_article_FK", ["articleId"], {})
-@Entity("article_price", { schema: "aplikacija" })
+@Entity("article_price")
 export class ArticlePrice {
   @PrimaryGeneratedColumn({
     type: "int",

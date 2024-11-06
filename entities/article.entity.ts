@@ -7,11 +7,11 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from "typeorm";
-import { Category } from "./Category";
-import { ArticleFeature } from "./ArticleFeature";
-import { ArticlePrice } from "./ArticlePrice";
-import { CartArticle } from "./CartArticle";
-import { Photo } from "./Photo";
+import { Category } from "./category.entity";
+import { ArticleFeature } from "./articleFeature.entity";
+import { ArticlePrice } from "./articlePrice.entity";
+import { CartArticle } from "./cartArticle.entity";
+import { Photo } from "./photo.entity";
 
 @Index("article_category_FK", ["categoryId"], {})
 @Entity("article", { schema: "aplikacija" })
